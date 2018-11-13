@@ -22,6 +22,9 @@ config :logger, :console,
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
 
+config :ethereumex,
+  url: "https://mainnet.infura.io/v3/2294f3b338ad4524aa9186012810e412"
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env()}.exs"
