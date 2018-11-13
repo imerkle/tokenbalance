@@ -75,4 +75,4 @@ config :logger, level: :info
 config :ethereumex,
   url: "https://mainnet.infura.io/v3/2294f3b338ad4524aa9186012810e412"
 
-import_config "prod.secret.exs"
+#import_config "prod.secret.exs"
