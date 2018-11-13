@@ -5,7 +5,7 @@
 # is restricted to this project.
 
 # General application configuration
-use Mix.Config
+use Mix.Config 
 
 # Configures the endpoint
 config :tokenbalance, TokenbalanceWeb.Endpoint,
