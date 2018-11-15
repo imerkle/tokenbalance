@@ -1,9 +1,9 @@
 defmodule TokenbalanceWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :tokenbalance
 
-  socket "/socket", TokenbalanceWeb.UserSocket,
-    websocket: [timeout: 45_000],
-    longpoll: false
+ # socket "/socket", TokenbalanceWeb.UserSocket,
+ #   websocket: [timeout: 45_000],
+ #   longpoll: false
 
   # Serve at "/" the static files from "priv/static" directory.
   #
@@ -20,7 +20,8 @@ defmodule TokenbalanceWeb.Endpoint do
   if code_reloading? do
     plug Phoenix.CodeReloader
   end
-
+  
+  plug CORSPlug
   plug Plug.RequestId
   plug Plug.Logger
 

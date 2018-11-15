@@ -38,7 +38,8 @@ defmodule Tokenbalance.MixProject do
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
       {:ethereumex, "~> 0.5.1"},
-      {:abi, "~> 0.1.8"}
+      {:abi, "~> 0.1.8"},
+      {:cors_plug, "~> 2.0"}
     ]
   end
 end
