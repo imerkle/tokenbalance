@@ -8,6 +8,6 @@ defmodule TokenbalanceWeb.Router do
   scope "/api", TokenbalanceWeb do
     pipe_through :api
     
-    get "/balance", TokenController, :balance
+    post "/balance", TokenController, :balance
   end
 end
