@@ -9,7 +9,7 @@ defmodule TokenbalanceWeb.TokenController do
                 balances = Map.put(balances, x, getBalance(address, x))
             end)
         end)
-        x = Task.await(t0)
+        x = Task.await(t0, 60000)
         json(conn, x)
       end
     
