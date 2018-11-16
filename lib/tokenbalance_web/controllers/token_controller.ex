@@ -3,10 +3,9 @@ defmodule TokenbalanceWeb.TokenController do
 
     def balance(conn, %{"address" => address,"tokens" => tokens}) do
         t0 = Task.async(fn ->
-            balances = %{}
             Enum.map(tokens, 
             fn x ->
-                balances = Map.put(balances, x, getBalance(address, x))
+                Map.put(%{}, x, getBalance(address, x))
             end)
         end)
         x = Task.await(t0, 60000)
